@@ -17,7 +17,7 @@ const Homepage = () => {
                     <section className='product-list'>
                         {products.data.map((product) => {
                             return(
-                                <section className='product'>
+                                <section className='product' key={product.id}>
                                     <div className='product-img'>
                                         <img src={product.image} alt={product.name}/>
                                     </div>

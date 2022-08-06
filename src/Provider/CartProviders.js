@@ -13,7 +13,8 @@ const CartProviders = ({children}) => {
         <div>
             <cartContext.Provider value={cart}>
                 <cartContextDispatcher.Provider value={dispatch}>
-                    {children}
+   
+                 {children}
                 </cartContextDispatcher.Provider>
             </cartContext.Provider>
         </div>
@@ -23,4 +24,4 @@ const CartProviders = ({children}) => {
 export default CartProviders;
 
 export const useCart = () => useContext(cartContext) ;
-export const useCartDispatcher = () => useContext(cartContextDispatcher);
+export const useCartActions = () => useContext(cartContextDispatcher);
